@@ -232,9 +232,9 @@ python -m pip install --upgrade pip
 MIT License
 
 ## Contact
-- Project Owner: Hung Truong
+- Project Owner: Tien Nguyen, Hung Truong
 - Project Link: https://github.com/hungtruongOwolf/tactic-scout
 
 ---
 
-Made with ❤️ by Hung Truong
+Made with ❤️ by Tien Nguyen, Hung Truong
