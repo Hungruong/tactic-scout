@@ -127,7 +127,7 @@ pip install -r requirements.txt
 3. Create .env file in the root directory and add:
 ```env
 MLB_API_BASE_URL=https://statsapi.mlb.com/api
-GEMINI_API_KEY=AIzaSyDnLeCd2fYsJH6YmQlgFpr3MCZ4k3ipYSI
+GEMINI_API_KEY=[your-key]
 ```
 
 4. Start the server:
