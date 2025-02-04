@@ -1,0 +1,382 @@
+2025-01-27 01:44:20,016 - root - ERROR - Error fetching today's games: MLBDataFetcher.fetch_games_by_date() missing 1 required positional argument: 'date'
+Traceback (most recent call last):
+  File "D:\MLB - v1 - not appied Vertex AI\api.py", line 177, in get_today_games
+    games = data_fetcher.fetch_games_by_date()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MLBDataFetcher.fetch_games_by_date() missing 1 required positional argument: 'date'
+2025-01-27 01:45:09,204 - root - WARNING - Could not initialize Gemini analyzer: No Gemini API key provided. Set GEMINI_API_KEY environment variable.
+2025-01-27 01:45:09,204 - root - INFO - Set season to 2024 based on game date
+2025-01-27 01:45:09,250 - root - ERROR - Error in analyze_live_game: Found array with 0 sample(s) (shape=(0, 71)) while a minimum of 1 is required by RandomForestClassifier.
+Traceback (most recent call last):
+  File "D:\MLB - v1 - not appied Vertex AI\src\predictor.py", line 62, in analyze_live_game
+    predictions = self.tactical_predictor.analyze_situation(game_df)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\src\model_training.py", line 223, in analyze_situation
+    tactical_probs = self.predict_proba(game_state)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\src\model_training.py", line 198, in predict_proba
+    probabilities = self.model.predict_proba(features)[0]
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\venv\Lib\site-packages\sklearn\ensemble\_forest.py", line 865, in predict_proba
+    X = self._validate_X_predict(X)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\venv\Lib\site-packages\sklearn\ensemble\_forest.py", line 599, in _validate_X_predict
+    X = self._validate_data(X, dtype=DTYPE, accept_sparse="csr", reset=False)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\venv\Lib\site-packages\sklearn\base.py", line 605, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\venv\Lib\site-packages\sklearn\utils\validation.py", line 967, in check_array
+    raise ValueError(
+ValueError: Found array with 0 sample(s) (shape=(0, 71)) while a minimum of 1 is required by RandomForestClassifier.
+2025-01-27 01:45:09,367 - root - ERROR - Error in predict_game: Found array with 0 sample(s) (shape=(0, 71)) while a minimum of 1 is required by RandomForestClassifier.
+Traceback (most recent call last):
+  File "D:\MLB - v1 - not appied Vertex AI\api.py", line 114, in predict_game
+    analysis = analyzer.analyze_live_game(game_data, stats_fetcher)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\src\predictor.py", line 62, in analyze_live_game
+    predictions = self.tactical_predictor.analyze_situation(game_df)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\src\model_training.py", line 223, in analyze_situation
+    tactical_probs = self.predict_proba(game_state)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\src\model_training.py", line 198, in predict_proba
+    probabilities = self.model.predict_proba(features)[0]
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\venv\Lib\site-packages\sklearn\ensemble\_forest.py", line 865, in predict_proba
+    X = self._validate_X_predict(X)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\venv\Lib\site-packages\sklearn\ensemble\_forest.py", line 599, in _validate_X_predict
+    X = self._validate_data(X, dtype=DTYPE, accept_sparse="csr", reset=False)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\venv\Lib\site-packages\sklearn\base.py", line 605, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\venv\Lib\site-packages\sklearn\utils\validation.py", line 967, in check_array
+    raise ValueError(
+ValueError: Found array with 0 sample(s) (shape=(0, 71)) while a minimum of 1 is required by RandomForestClassifier.
+2025-01-27 01:45:27,078 - root - WARNING - Could not initialize Gemini analyzer: No Gemini API key provided. Set GEMINI_API_KEY environment variable.
+2025-01-27 01:45:27,079 - root - INFO - Set season to 2024 based on game date
+2025-01-27 01:45:27,109 - root - ERROR - Error in analyze_live_game: Found array with 0 sample(s) (shape=(0, 71)) while a minimum of 1 is required by RandomForestClassifier.
+Traceback (most recent call last):
+  File "D:\MLB - v1 - not appied Vertex AI\src\predictor.py", line 62, in analyze_live_game
+    predictions = self.tactical_predictor.analyze_situation(game_df)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\src\model_training.py", line 223, in analyze_situation
+    tactical_probs = self.predict_proba(game_state)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\src\model_training.py", line 198, in predict_proba
+    probabilities = self.model.predict_proba(features)[0]
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\venv\Lib\site-packages\sklearn\ensemble\_forest.py", line 865, in predict_proba
+    X = self._validate_X_predict(X)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\venv\Lib\site-packages\sklearn\ensemble\_forest.py", line 599, in _validate_X_predict
+    X = self._validate_data(X, dtype=DTYPE, accept_sparse="csr", reset=False)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\venv\Lib\site-packages\sklearn\base.py", line 605, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\venv\Lib\site-packages\sklearn\utils\validation.py", line 967, in check_array
+    raise ValueError(
+ValueError: Found array with 0 sample(s) (shape=(0, 71)) while a minimum of 1 is required by RandomForestClassifier.
+2025-01-27 01:45:27,112 - root - ERROR - Error in predict_game: Found array with 0 sample(s) (shape=(0, 71)) while a minimum of 1 is required by RandomForestClassifier.
+Traceback (most recent call last):
+  File "D:\MLB - v1 - not appied Vertex AI\api.py", line 114, in predict_game
+    analysis = analyzer.analyze_live_game(game_data, stats_fetcher)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\src\predictor.py", line 62, in analyze_live_game
+    predictions = self.tactical_predictor.analyze_situation(game_df)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\src\model_training.py", line 223, in analyze_situation
+    tactical_probs = self.predict_proba(game_state)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\src\model_training.py", line 198, in predict_proba
+    probabilities = self.model.predict_proba(features)[0]
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\venv\Lib\site-packages\sklearn\ensemble\_forest.py", line 865, in predict_proba
+    X = self._validate_X_predict(X)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\venv\Lib\site-packages\sklearn\ensemble\_forest.py", line 599, in _validate_X_predict
+    X = self._validate_data(X, dtype=DTYPE, accept_sparse="csr", reset=False)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\venv\Lib\site-packages\sklearn\base.py", line 605, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MLB - v1 - not appied Vertex AI\venv\Lib\site-packages\sklearn\utils\validation.py", line 967, in check_array
+    raise ValueError(
+ValueError: Found array with 0 sample(s) (shape=(0, 71)) while a minimum of 1 is required by RandomForestClassifier.
+2025-01-27 01:50:28,792 - root - INFO - Set season to 2023 based on game date
+2025-01-27 01:50:28,793 - root - INFO - Set season to 2023 based on game date
+2025-01-27 01:50:28,794 - root - INFO - Processing game 717446 with 73 plays
+2025-01-27 01:50:29,502 - root - WARNING - Could not initialize Gemini analyzer: No Gemini API key provided. Set GEMINI_API_KEY environment variable.
+2025-01-27 01:50:29,502 - root - INFO - Set season to 2023 based on game date
+2025-01-27 01:51:14,186 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-01-27 01:53:42,150 - root - INFO - Set season to 2023 based on game date
+2025-01-27 01:53:42,152 - root - INFO - Processing game 717446 with 73 plays
+2025-01-27 01:53:42,199 - root - WARNING - Could not initialize Gemini analyzer: No Gemini API key provided. Set GEMINI_API_KEY environment variable.
+2025-01-27 01:53:42,199 - root - INFO - Set season to 2023 based on game date
+2025-01-27 01:54:20,875 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-01-27 01:55:36,488 - root - INFO - Set season to 2023 based on game date
+2025-01-27 01:55:36,489 - root - INFO - Set season to 2023 based on game date
+2025-01-27 01:55:36,489 - root - INFO - Processing game 717446 with 73 plays
+2025-01-27 01:55:36,849 - root - WARNING - Could not initialize Gemini analyzer: No Gemini API key provided. Set GEMINI_API_KEY environment variable.
+2025-01-27 01:55:36,850 - root - INFO - Set season to 2023 based on game date
+2025-01-27 01:56:21,597 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-01-27 08:38:55,848 - root - INFO - Set season to 2023 based on game date
+2025-01-27 08:38:55,849 - root - INFO - Set season to 2023 based on game date
+2025-01-27 08:38:55,850 - root - INFO - Processing game 717446 with 73 plays
+2025-01-27 08:38:56,324 - root - WARNING - Could not initialize Gemini analyzer: No Gemini API key provided. Set GEMINI_API_KEY environment variable.
+2025-01-27 08:38:56,325 - root - INFO - Set season to 2023 based on game date
+2025-01-27 08:39:43,175 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-01-27 08:42:16,429 - root - INFO - Set season to 2023 based on game date
+2025-01-27 08:42:16,430 - root - INFO - Processing game 717446 with 73 plays
+2025-01-27 08:42:16,481 - root - WARNING - Could not initialize Gemini analyzer: No Gemini API key provided. Set GEMINI_API_KEY environment variable.
+2025-01-27 08:42:16,481 - root - INFO - Set season to 2023 based on game date
+2025-01-27 08:42:55,605 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-01-27 08:44:09,532 - root - INFO - Set season to 2023 based on game date
+2025-01-27 08:44:09,533 - root - INFO - Set season to 2023 based on game date
+2025-01-27 08:44:09,533 - root - INFO - Processing game 717446 with 73 plays
+2025-01-27 08:44:09,960 - root - WARNING - Could not initialize Gemini analyzer: No Gemini API key provided. Set GEMINI_API_KEY environment variable.
+2025-01-27 08:44:09,961 - root - INFO - Set season to 2023 based on game date
+2025-01-27 08:44:54,984 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-01-27 08:50:30,057 - root - INFO - Set season to 2023 based on game date
+2025-01-27 08:50:30,058 - root - INFO - Set season to 2023 based on game date
+2025-01-27 08:50:30,058 - root - INFO - Processing game 717446 with 73 plays
+2025-01-27 08:50:30,363 - root - INFO - Gemini analyzer initialized successfully
+2025-01-27 08:50:30,364 - root - INFO - Set season to 2023 based on game date
+2025-01-27 08:51:20,105 - root - INFO - Generated Gemini analysis successfully
+2025-01-27 08:51:20,112 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-01-27 08:59:27,338 - root - INFO - Set season to 2023 based on game date
+2025-01-27 08:59:27,340 - root - INFO - Set season to 2023 based on game date
+2025-01-27 08:59:27,340 - root - INFO - Processing game 717446 with 73 plays
+2025-01-27 08:59:27,396 - root - INFO - Gemini analyzer initialized successfully
+2025-01-27 08:59:27,396 - root - INFO - Gemini analyzer initialized successfully
+2025-01-27 08:59:27,397 - root - INFO - Set season to 2023 based on game date
+2025-01-27 09:00:17,999 - root - INFO - Generated Gemini analysis successfully
+2025-01-27 09:00:18,002 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-01-27 10:20:21,497 - root - INFO - Set season to 2023 based on game date
+2025-01-27 10:20:21,499 - root - INFO - Set season to 2023 based on game date
+2025-01-27 10:20:21,500 - root - INFO - Processing game 717445 with 71 plays
+2025-01-27 10:20:21,554 - root - INFO - Gemini analyzer initialized successfully
+2025-01-27 10:20:21,554 - root - INFO - Gemini analyzer initialized successfully
+2025-01-27 10:20:21,555 - root - INFO - Set season to 2023 based on game date
+2025-01-27 10:21:13,480 - root - INFO - Generated Gemini analysis successfully
+2025-01-27 10:21:13,483 - root - INFO - Data saved to data/processed/game_717445_analysis.json
+2025-01-27 10:21:22,357 - root - INFO - Set season to 2023 based on game date
+2025-01-27 10:21:22,358 - root - INFO - Processing game 717444 with 80 plays
+2025-01-27 10:21:22,408 - root - INFO - Gemini analyzer initialized successfully
+2025-01-27 10:21:22,408 - root - INFO - Gemini analyzer initialized successfully
+2025-01-27 10:21:22,409 - root - INFO - Set season to 2023 based on game date
+2025-01-27 10:21:42,337 - root - INFO - Generated Gemini analysis successfully
+2025-01-27 10:21:42,340 - root - INFO - Data saved to data/processed/game_717444_analysis.json
+2025-01-27 10:22:13,140 - root - INFO - Set season to 2023 based on game date
+2025-01-27 10:22:13,141 - root - INFO - Processing game 717443 with 85 plays
+2025-01-27 10:22:13,190 - root - INFO - Gemini analyzer initialized successfully
+2025-01-27 10:22:13,191 - root - INFO - Gemini analyzer initialized successfully
+2025-01-27 10:22:13,191 - root - INFO - Set season to 2023 based on game date
+2025-01-27 10:22:28,275 - root - INFO - Generated Gemini analysis successfully
+2025-01-27 10:22:28,277 - root - INFO - Data saved to data/processed/game_717443_analysis.json
+2025-01-28 17:33:34,590 - root - INFO - Set season to 2023 based on game date
+2025-01-28 17:33:34,605 - root - INFO - Set season to 2023 based on game date
+2025-01-28 17:33:34,605 - root - INFO - Processing game 717443 with 85 plays
+2025-01-28 17:33:34,697 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 17:33:34,698 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 17:33:34,701 - root - INFO - Set season to 2023 based on game date
+2025-01-28 17:33:46,540 - root - INFO - Generated Gemini analysis successfully
+2025-01-28 17:33:46,542 - root - INFO - Data saved to data/processed/game_717443_analysis.json
+2025-01-28 18:21:57,808 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:21:57,816 - root - INFO - Processing game 717446 with 73 plays
+2025-01-28 18:21:57,974 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:21:57,975 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:21:57,976 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:22:50,656 - root - INFO - Generated Gemini analysis successfully
+2025-01-28 18:22:50,661 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-01-28 18:23:05,469 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:23:05,469 - root - INFO - Processing game 717447 with 69 plays
+2025-01-28 18:23:05,533 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:23:05,534 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:23:05,534 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:23:15,776 - root - INFO - Generated Gemini analysis successfully
+2025-01-28 18:23:15,779 - root - INFO - Data saved to data/processed/game_717447_analysis.json
+2025-01-28 18:23:39,039 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:23:39,040 - root - INFO - Processing game 717448 with 67 plays
+2025-01-28 18:23:39,126 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:23:39,126 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:23:39,126 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:23:54,565 - root - INFO - Generated Gemini analysis successfully
+2025-01-28 18:23:54,568 - root - INFO - Data saved to data/processed/game_717448_analysis.json
+2025-01-28 18:24:15,036 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:24:15,037 - root - INFO - Processing game 717446 with 73 plays
+2025-01-28 18:24:15,114 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:24:15,115 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:24:15,116 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:24:58,106 - root - INFO - Generated Gemini analysis successfully
+2025-01-28 18:24:58,108 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-01-28 18:26:33,710 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:26:33,711 - root - INFO - Processing game 717447 with 69 plays
+2025-01-28 18:26:33,763 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:26:33,764 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:26:33,764 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:26:37,027 - root - INFO - Generated Gemini analysis successfully
+2025-01-28 18:26:37,030 - root - INFO - Data saved to data/processed/game_717447_analysis.json
+2025-01-28 18:26:41,231 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:26:41,232 - root - INFO - Processing game 717448 with 67 plays
+2025-01-28 18:26:41,286 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:26:41,288 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:26:41,288 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:26:49,048 - root - INFO - Generated Gemini analysis successfully
+2025-01-28 18:26:49,051 - root - INFO - Data saved to data/processed/game_717448_analysis.json
+2025-01-28 18:31:50,761 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:31:50,761 - root - INFO - Processing game 717446 with 73 plays
+2025-01-28 18:31:50,816 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:31:50,817 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:31:50,817 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:32:35,830 - root - INFO - Generated Gemini analysis successfully
+2025-01-28 18:32:35,832 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-01-28 18:32:41,854 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:32:41,855 - root - INFO - Processing game 717447 with 69 plays
+2025-01-28 18:32:41,926 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:32:41,926 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:32:41,927 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:32:46,062 - root - INFO - Generated Gemini analysis successfully
+2025-01-28 18:32:46,064 - root - INFO - Data saved to data/processed/game_717447_analysis.json
+2025-01-28 18:32:48,898 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:32:48,898 - root - INFO - Processing game 717446 with 73 plays
+2025-01-28 18:32:48,974 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:32:48,975 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:32:48,975 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:33:32,512 - root - INFO - Generated Gemini analysis successfully
+2025-01-28 18:33:32,514 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-01-28 18:33:38,763 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:33:38,764 - root - INFO - Processing game 717448 with 67 plays
+2025-01-28 18:33:38,833 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:33:38,833 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:33:38,833 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:33:46,752 - root - INFO - Generated Gemini analysis successfully
+2025-01-28 18:33:46,754 - root - INFO - Data saved to data/processed/game_717448_analysis.json
+2025-01-28 18:33:48,853 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:33:48,854 - root - INFO - Processing game 717446 with 73 plays
+2025-01-28 18:33:48,933 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:33:48,933 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:33:48,934 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:34:32,877 - root - INFO - Generated Gemini analysis successfully
+2025-01-28 18:34:32,880 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-01-28 18:58:33,085 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:58:33,088 - root - INFO - Processing game 717446 with 73 plays
+2025-01-28 18:58:33,164 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:58:33,164 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:58:33,165 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:59:16,600 - root - INFO - Generated Gemini analysis successfully
+2025-01-28 18:59:16,603 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-01-28 18:59:51,810 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:59:51,811 - root - INFO - Processing game 717447 with 69 plays
+2025-01-28 18:59:51,866 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:59:51,866 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 18:59:51,866 - root - INFO - Set season to 2023 based on game date
+2025-01-28 18:59:56,451 - root - INFO - Generated Gemini analysis successfully
+2025-01-28 18:59:56,452 - root - INFO - Data saved to data/processed/game_717447_analysis.json
+2025-01-28 19:00:34,066 - root - INFO - Set season to 2023 based on game date
+2025-01-28 19:00:34,066 - root - INFO - Processing game 717446 with 73 plays
+2025-01-28 19:00:34,128 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 19:00:34,129 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 19:00:34,129 - root - INFO - Set season to 2023 based on game date
+2025-01-28 19:01:17,689 - root - INFO - Generated Gemini analysis successfully
+2025-01-28 19:01:17,691 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-01-28 19:01:41,315 - root - INFO - Set season to 2023 based on game date
+2025-01-28 19:01:41,316 - root - INFO - Processing game 717447 with 69 plays
+2025-01-28 19:01:41,370 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 19:01:41,370 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 19:01:41,371 - root - INFO - Set season to 2023 based on game date
+2025-01-28 19:01:44,848 - root - INFO - Generated Gemini analysis successfully
+2025-01-28 19:01:44,851 - root - INFO - Data saved to data/processed/game_717447_analysis.json
+2025-01-28 19:04:09,978 - root - INFO - Set season to 2023 based on game date
+2025-01-28 19:04:09,979 - root - INFO - Processing game 717446 with 73 plays
+2025-01-28 19:04:10,049 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 19:04:10,049 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 19:04:10,049 - root - INFO - Set season to 2023 based on game date
+2025-01-28 19:04:54,372 - root - INFO - Generated Gemini analysis successfully
+2025-01-28 19:04:54,374 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-01-28 19:15:41,698 - root - INFO - Set season to 2023 based on game date
+2025-01-28 19:15:41,699 - root - INFO - Processing game 717446 with 73 plays
+2025-01-28 19:15:41,765 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 19:15:41,766 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 19:15:41,766 - root - INFO - Set season to 2023 based on game date
+2025-01-28 19:16:26,915 - root - INFO - Generated Gemini analysis successfully
+2025-01-28 19:16:26,917 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-01-28 19:24:08,405 - root - INFO - Set season to 2023 based on game date
+2025-01-28 19:24:08,413 - root - INFO - Processing game 717446 with 73 plays
+2025-01-28 19:24:08,528 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 19:24:08,529 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 19:24:08,530 - root - INFO - Set season to 2023 based on game date
+2025-01-28 19:24:52,462 - root - INFO - Generated Gemini analysis successfully
+2025-01-28 19:24:52,465 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-01-28 19:24:59,227 - root - INFO - Set season to 2023 based on game date
+2025-01-28 19:24:59,228 - root - INFO - Processing game 717447 with 69 plays
+2025-01-28 19:24:59,290 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 19:24:59,290 - root - INFO - Gemini analyzer initialized successfully
+2025-01-28 19:24:59,290 - root - INFO - Set season to 2023 based on game date
+2025-01-28 19:25:03,385 - root - INFO - Generated Gemini analysis successfully
+2025-01-28 19:25:03,387 - root - INFO - Data saved to data/processed/game_717447_analysis.json
+2025-01-29 08:29:13,303 - root - INFO - Set season to 2023 based on game date
+2025-01-29 08:29:13,305 - root - INFO - Set season to 2023 based on game date
+2025-01-29 08:29:13,305 - root - INFO - Processing game 717446 with 73 plays
+2025-01-29 08:29:13,371 - root - INFO - Gemini analyzer initialized successfully
+2025-01-29 08:29:13,372 - root - INFO - Gemini analyzer initialized successfully
+2025-01-29 08:29:13,373 - root - INFO - Set season to 2023 based on game date
+2025-01-29 08:30:04,955 - root - INFO - Generated Gemini analysis successfully
+2025-01-29 08:30:04,959 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-01-31 18:19:22,801 - root - INFO - Set season to 2023 based on game date
+2025-01-31 18:19:22,802 - root - INFO - Set season to 2023 based on game date
+2025-01-31 18:19:22,803 - root - INFO - Processing game 717446 with 73 plays
+2025-01-31 18:19:22,875 - root - INFO - Gemini analyzer initialized successfully
+2025-01-31 18:19:22,876 - root - INFO - Gemini analyzer initialized successfully
+2025-01-31 18:19:22,876 - root - INFO - Set season to 2023 based on game date
+2025-01-31 18:20:14,220 - root - INFO - Generated Gemini analysis successfully
+2025-01-31 18:20:14,222 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-01-31 18:27:26,972 - root - INFO - Set season to 2023 based on game date
+2025-01-31 18:27:26,974 - root - INFO - Processing game 717446 with 73 plays
+2025-01-31 18:27:27,223 - root - INFO - Gemini analyzer initialized successfully
+2025-01-31 18:27:27,224 - root - INFO - Gemini analyzer initialized successfully
+2025-01-31 18:27:27,224 - root - INFO - Set season to 2023 based on game date
+2025-01-31 18:28:11,997 - root - INFO - Generated Gemini analysis successfully
+2025-01-31 18:28:12,002 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-01-31 18:44:44,253 - root - INFO - Set season to 2023 based on game date
+2025-01-31 18:44:44,255 - root - INFO - Set season to 2023 based on game date
+2025-01-31 18:44:44,255 - root - INFO - Processing game 717446 with 73 plays
+2025-01-31 18:44:44,409 - root - INFO - Gemini analyzer initialized successfully
+2025-01-31 18:44:44,409 - root - INFO - Gemini analyzer initialized successfully
+2025-01-31 18:44:44,410 - root - INFO - Set season to 2023 based on game date
+2025-01-31 18:45:34,561 - root - INFO - Generated Gemini analysis successfully
+2025-01-31 18:45:34,563 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-01-31 18:48:38,537 - root - INFO - Set season to 2023 based on game date
+2025-01-31 18:48:38,537 - root - INFO - Processing game 717446 with 73 plays
+2025-01-31 18:48:38,594 - root - INFO - Gemini analyzer initialized successfully
+2025-01-31 18:48:38,594 - root - INFO - Gemini analyzer initialized successfully
+2025-01-31 18:48:38,594 - root - INFO - Set season to 2023 based on game date
+2025-01-31 18:49:21,908 - root - INFO - Generated Gemini analysis successfully
+2025-01-31 18:49:21,909 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-01-31 23:23:55,688 - root - INFO - Set season to 2023 based on game date
+2025-01-31 23:23:55,689 - root - INFO - Set season to 2023 based on game date
+2025-01-31 23:23:55,689 - root - INFO - Processing game 717446 with 73 plays
+2025-01-31 23:23:55,756 - root - INFO - Gemini analyzer initialized successfully
+2025-01-31 23:23:55,756 - root - INFO - Gemini analyzer initialized successfully
+2025-01-31 23:23:55,757 - root - INFO - Set season to 2023 based on game date
+2025-01-31 23:24:44,388 - root - INFO - Generated Gemini analysis successfully
+2025-01-31 23:24:44,390 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-02-03 20:13:25,358 - root - INFO - Set season to 2023 based on game date
+2025-02-03 20:13:25,358 - root - INFO - Set season to 2023 based on game date
+2025-02-03 20:13:25,360 - root - INFO - Processing game 717446 with 73 plays
+2025-02-03 20:13:25,438 - root - INFO - Gemini analyzer initialized successfully
+2025-02-03 20:13:25,439 - root - INFO - Gemini analyzer initialized successfully
+2025-02-03 20:13:25,439 - root - INFO - Set season to 2023 based on game date
+2025-02-03 20:14:15,616 - root - INFO - Generated Gemini analysis successfully
+2025-02-03 20:14:15,619 - root - INFO - Data saved to data/processed/game_717446_analysis.json
+2025-02-03 23:46:59,784 - root - INFO - Set season to 2023 based on game date
+2025-02-03 23:46:59,793 - root - INFO - Set season to 2023 based on game date
+2025-02-03 23:46:59,800 - root - INFO - Processing game 717446 with 73 plays
+2025-02-03 23:46:59,961 - root - INFO - Gemini analyzer initialized successfully
+2025-02-03 23:46:59,962 - root - INFO - Gemini analyzer initialized successfully
+2025-02-03 23:46:59,964 - root - INFO - Set season to 2023 based on game date
+2025-02-03 23:47:49,235 - root - INFO - Generated Gemini analysis successfully
+2025-02-03 23:47:49,236 - root - INFO - Data saved to data/processed/game_717446_analysis.json
