@@ -145,8 +145,8 @@ uvicorn api:app --reload --port 8000
 1. Create and activate virtual environment:
 ```bash
 python -m venv venv
-env\Scripts\activate  # Windows
-source env/bin/activate  # Linux/Mac
+venv\Scripts\activate  # Windows
+source venv/bin/activate  # Linux/Mac
 ```
 
 2. Install requirements:
