@@ -1,5 +1,7 @@
 # Tactic Scout - Baseball Analysis App
 
+https://tactic-scout.vercel.app/
+
 ## Overview
 Tactic Scout is an advanced baseball analysis application that combines Flutter mobile development with machine learning capabilities for real-time player detection and game prediction. This application helps coaches, players, and analysts make data-driven decisions by providing comprehensive baseball tactical analysis tools.
 
